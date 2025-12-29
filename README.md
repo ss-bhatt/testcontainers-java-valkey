@@ -1,10 +1,15 @@
 # Testcontainers Valkey Module for Java
 
-The Java implementation of the Valkey Testcontainer, designed for feature parity with the Go and Node.js ecosystems.
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.ss-bhatt/testcontainers-valkey.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/io.github.ss-bhatt/testcontainers-valkey)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+The official community implementation of the Valkey Testcontainer for Java, designed for feature parity with the Go and Node.js ecosystems.
 
 ## Introduction
 
 Testcontainers Valkey is a Java module that provides a lightweight, throwaway instance of [Valkey](https://valkey.io/) for integration testing. It allows you to reliably test your application against a real Valkey instance, ensuring that your code works as expected in production.
+
+This module closes the gap for Enterprise Java teams migrating from Redis to Valkey, offering a drop-in replacement for existing Redis containers.
 
 ## Maven Coordinates
 
@@ -14,7 +19,7 @@ Add the following dependency to your `pom.xml`:
 <dependency>
     <groupId>io.github.ss-bhatt</groupId>
     <artifactId>testcontainers-valkey</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <scope>test</scope>
 </dependency>
 ```
