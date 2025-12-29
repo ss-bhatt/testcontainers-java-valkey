@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
@@ -18,6 +17,9 @@ jobs:
           cache: 'maven'
           gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           gpg-passphrase: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+          server-id: central
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
 
       - name: Publish to Central
         run: mvn deploy -P release -Dgpg.passphrase="${{ secrets.MAVEN_GPG_PASSPHRASE }}"
